@@ -1,0 +1,6 @@
+Progrmação orientada a objetos:
+	Utiliza-se objeto, que seria uma modelagem de uma entidade;
+	Modelagem de entidades
+	Possui atributos (característica)
+	Métodos (O que pode fazer)
+	
