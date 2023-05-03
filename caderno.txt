@@ -3,4 +3,106 @@ Progrmação orientada a objetos:
 	Modelagem de entidades
 	Possui atributos (característica)
 	Métodos (O que pode fazer)
+	Instância de objetos
 	
+Modelagem de entidades:
+	class Pessoas():
+		def __init__(self, nome, idade, cpf):   -> Método construtor
+       		 	self.nome = nome                -> Atributo 1
+       		 	self.idade = idade		-> Atributo 2
+        		self.cpf = cpf			-> Atributo 3
+
+
+Método construtor:
+	- É sempre chamado quando iniciamos uma instância da classe
+	- Armazena os atributos da classe
+	
+	#Atributos:
+		- São as características da classe
+	#Self:
+		- Se referência á uma instância da classe
+		- Define que um determinado atributo pertence 
+		  a uma determinada instância
+		- Permite o acesso da instância a um atributo
+Instânciar um objetos:
+	p1 = Pessoas('nome', idade, cpf)
+	print(p1.nome) --> nome
+Classe:
+	Entidade modelo
+	#Atributo da Classe:
+		- São características já definidas na classe
+		- Não precisa de instância para acessar
+	#Métodos da Classe:
+		- São ações que a classe pode fazer
+		- Não precisa de instância para acessar
+ 		@classmethod
+   		def andar(cls, velocidade):
+        		print(f'Estou andando na Velocidade = {velocidade}m/s')
+		#cls:
+			- Se referência á uma classe
+			- Define um determinado atributo de uma classe
+			- Permite o acesso da classe a um atributo
+
+Método Estático:
+	- É um Método utilitário
+	- Não consegue acessar ou modificar nenhum atributo de classe
+	- Não precisa de instância para acessar
+	@staticmethod
+    	def adulto(idade):
+       		if idade > 18:
+           		 return True
+       		 return False
+Herança:
+	- Quando uma classe Herda os métodos e atributos de outra classe
+	Class Vendedor(Pessoa):
+	#Sobreposição:
+		- Quando o mesmo método é criado duas vezes
+		- Executa o método feito na classe filho
+
+		class Pessoa: 
+   			def falar(self):
+       				 print('Estou falando')
+
+    			def andar(self):
+       				 print('Estou andando')
+
+		class Cliente(Pessoa):
+    			def comprar(self):
+       				 print('estou comprando')
+
+    			def falar(self):
+        		print('Estou gritando')
+	#Classe Pai:
+		- Aquela que está passando os métodos e atributos para outra classe
+	#Classe Filho:
+		- Aquela que está recebendo os métodos e atributos para outra classe
+	#Referência a classe Pai:
+		- Pega um atributo ou método da classe pai		
+		- super()
+
+Herança Múltipla:
+	- quando a classe pai possui uma herança
+	class Animal:
+  		def andar(self):
+       			print("Estou andando")
+
+   		def correr(self):
+        		print("Estou correndo")
+
+    		def pular(self):
+        		print("Estou pulando")
+
+	class Felino(Animal):
+    		def felino(self):
+       			print('eu sou um felino')
+
+	class Gato(Animal):
+   		 def miar(self):
+        		print("Estou miando")
+
+
+g1 = Gato()
+g1.andar()
+
+
+		
